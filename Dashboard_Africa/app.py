@@ -105,8 +105,6 @@ conflict_table = dash_table.DataTable(
     page_size=10
 )
 
-
-
 # Conflicts Dropdowns
 conflict_dropdown = dcc.Dropdown(
     id='conflict-dropdown',
@@ -150,7 +148,7 @@ year_range_slider = dcc.RangeSlider(
 )
 
 # App layout
-app.layout = ([
+app.layout = ([dbc.Container([
     dbc.Row([
         dbc.Col(html.H4('Wars and Agriculture Industry in the Africa',
                         className="bg-primary p-2 mb-2 text-center text-white")
@@ -172,11 +170,11 @@ app.layout = ([
                         dbc.CardBody([
                             html.Label('Select Conflict Type:', className='fw-bold'),
                             conflict_dropdown,
-                            html.Div(style={'height': '20px'})
+                            html.Div(style={'height': '5px'})
                         ])
                     ])
                 ])
-            ], className='mt-2'),
+            ], className='mt-3'),
 
             dbc.Row([
                 dbc.Col([
@@ -195,25 +193,27 @@ app.layout = ([
                         ])
                     ])
                 ], width=6)
-            ], className='mt-2'),
+            ], className='mt-4'),
         ]),
 
         dcc.Tab(label='Comparison Chart', value='tab-comparison', children=[
-            # Contents of second tab - comparison chart
-            dbc.Row([
-                dbc.Col([
-                    dbc.Card([
-                        dbc.CardHeader(html.H5("Dashboard Controls")),
-                        dbc.CardBody([
-                            html.Label("Select Conflict Type:", className="fw-bold mb-2"),
-                            comparison_conflict_dropdown,
-                            html.Div(style={"height": "20px"}),  # Spacer
-                            html.Label("Select Year Range:", className="fw-bold mb-2"),
-                            year_range_slider
+            dbc.Container([
+                # Contents of second tab - comparison chart
+                dbc.Row([
+                    dbc.Col([
+                        dbc.Card([
+                            dbc.CardHeader(html.H5("Dashboard Controls")),
+                            dbc.CardBody([
+                                html.Label("Conflict Type:", className="fw-bold mb-2"),
+                                comparison_conflict_dropdown,
+                                html.Div(style={"height": "20px"}),  # Spacer
+                                html.Label("Year Range:", className="fw-bold mb-2"),
+                                year_range_slider
+                            ])
                         ])
                     ])
-                ])
-            ], className="mt-2"),
+                ], className="mt-4"),
+            ]),
 
             dbc.Row([
                 dbc.Col([
@@ -236,26 +236,29 @@ app.layout = ([
         ]),
 
         dcc.Tab(label='Data Tables', value='tab-tables', children=[
-            # Contents of third tab - data tables
-            dbc.Row([
-                dbc.Col([
-                    dbc.Card([
-                        dbc.CardHeader(html.H5("Conflict Data")),
-                        dbc.CardBody([
-                            conflict_table
-                        ])
-                    ]),
-                    html.Div(style={"height": "20px"}),  # Spacer
-                    dbc.Card([
-                        dbc.CardHeader(html.H5("Agriculture Data")),
-                        dbc.CardBody([
-                            agriculture_table
+            dbc.Container([
+                # Contents of third tab - data tables
+                dbc.Row([
+                    dbc.Col([
+                        dbc.Card([
+                            dbc.CardHeader(html.H5("Conflict Data")),
+                            dbc.CardBody([
+                                conflict_table
+                            ])
+                        ]),
+                        html.Div(style={"height": "20px"}),  # Spacer
+                        dbc.Card([
+                            dbc.CardHeader(html.H5("Agriculture Data")),
+                            dbc.CardBody([
+                                agriculture_table
+                            ])
                         ])
                     ])
                 ])
             ])
         ]),
     ]),
+])
 ])
 
 callbacks(app)
