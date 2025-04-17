@@ -6,12 +6,14 @@
 
 
 ## Thesis Statement
-This dashboard is intentionally designed to mislead the audience that slavery has developed Africa. Some European scholars claim
-that this is the case even though slavery was immorally wrong and greedy. However, the reality is that slavery underdeveloped Africa even though 
-Europe introduced new crops that became the Africa's agriculture staples. 
+This dashboard is intentionally designed to mislead the audience that wars that came as a result of slavery are developing Africa. 
+Some European scholars claim that even though slavery is immorally evil, but it developed Africa. According to Walter Rodney, 
+a panafricanist from Guyana, this is a false narrative. In his book, 'How Europe Underdeveloped Africa', he points out that 
+there is nothing positive that came from slavery even the crops that the Europeans claim to have brought in can never be comparable to the 
+loss that Africa got from slavery. 
 
 ## Context of my data visualization
-The dashboard is designed to tell the narrative of the European scholars who claim that slavery developed Africa.(A lie)  
+The dashboard is designed to tell the narrative of the European scholars who claim that wars that are currently happening from Africa are developing the continent.(A lie)  
 
 ## Data I will be visualizing
 I will be visualizing two charts that shows us how wars are increasing in Africa, as the agriculture production is also increasing.
