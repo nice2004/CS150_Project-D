@@ -1,4 +1,4 @@
-# Project-D---
+# CS 150_Project-D
 
 ***Names: Nice Teta Hirwa*** <br />
 ***Instructor: Professor Mike Ryu*** <br />
